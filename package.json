@@ -1,6 +1,6 @@
 {
-  "name": "threejs-tester",
-  "homepage": "https://matthova.github.io/react-threejs-ui-boilerplate/",
+  "name": "motion-test",
+  "homepage": "https://matthova.github.io/motion-test/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {},
@@ -12,7 +12,8 @@
     "react-dom": "15.5.3",
     "react-scripts": "0.9.5",
     "react-three-renderer": "3.0.2",
-    "three": "0.84.0"
+    "three": "0.84.0",
+    "three-orbit-controls": "^82.1.0"
   },
   "scripts": {
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",

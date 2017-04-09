@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import React3 from 'react-three-renderer';
 import * as THREE from 'three';
+const OrbitControls = require('three-orbit-controls')(THREE);
 
 class Canvas extends Component {
   constructor(props, context) {
@@ -30,6 +31,16 @@ class Canvas extends Component {
     };
   }
 
+  componentDidMount() {
+    const controls = new OrbitControls(this.refs.camera);
+    this.controls = controls;
+  }
+
+  componentWillUnmount() {
+    this.controls.dispose();
+    delete this.controls;
+  }
+
   render() {
     const width = window.innerWidth; // canvas width
     const height = window.innerHeight; // canvas height
@@ -44,6 +55,7 @@ class Canvas extends Component {
         <scene>
           <perspectiveCamera
             name="camera"
+            ref="camera"
             fov={75}
             aspect={width / height}
             near={0.1}
