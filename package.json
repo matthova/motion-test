@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
+    "gcode-json-converter": "^0.2.2",
     "gh-pages": "^0.12.0",
     "node-sass": "^4.5.2",
     "npm-run-all": "^4.0.2",
